@@ -1,0 +1,48 @@
+<div class="search-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="column-8">
+				<h3>Search Artist</h3>
+				<div class="field-item">
+					<input type="" placeholder="Search Artist" (keyup)="onSearch()" class="" name="search" [(ngModel)]="search">
+					<img src="assets/images/search.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- search artist html -->
+<div *ngIf="searchClicked" class="artist-list">
+
+	<div class="container">
+		<div class="artist-result" *ngIf="artists.name">		
+			<h3> Result found for "<span class="search-item">{{ search }}</span>"</h3>
+			<ul class="row">
+				
+				<li class="column-3">
+					<div class="artist-detail-item">
+						<div class="avatar-img">
+							<figure>
+								<img [src]="artists.thumb_url">
+							</figure>
+						</div>
+						<div class="artist-detail">
+							<h4>{{ artists.name }}</h4>
+							<a [href]="artists.facebook_page_url">{{ artists.facebook_page_url }}</a>
+						</div>
+						<div class="artist-links">
+							<a [routerLink]="['/events', artists.name, 'upcoming']"> Upcoming Events</a>
+						<a [routerLink]="['/events', artists.name, 'past']" > Past Events</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+			 
+		</div>
+		<div class="artist-result" *ngIf="searchClicked && !artists.name"><h3 >No result found for {{ search }}</h3></div>
+		
+	</div>
+	
+</div>

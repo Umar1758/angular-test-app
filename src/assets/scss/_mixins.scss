@@ -1,0 +1,38 @@
+// Mixins
+@mixin css3($a,$b){
+    -moz-#{$a}: $b;
+    -webkit-#{$a}: $b;
+    #{$a}: $b;
+}
+
+
+$grid-columns: 12;
+@for $i from 1 through $grid-columns {
+  .column-#{$i} {
+    max-width: percentage($i / $grid-columns);
+    flex: percentage($i / $grid-columns);
+  }
+}
+
+
+// styles
+[class^='column-'] {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    flex: 100%;
+  }
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-left: 0;
+    padding-right: 0;
+}

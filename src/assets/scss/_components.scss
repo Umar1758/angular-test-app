@@ -1,0 +1,171 @@
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+
+    @media (min-width:1200px) {
+        max-width: 1160px;
+        margin: 0 auto;
+    }
+
+}
+
+
+body {
+    font-family: var(--themefontfamily);
+    background: var(--graygcolor);
+}
+
+h3 {
+    color: var(--blackcolor);
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0 0 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.artist-list {
+    ul {
+        // display: flex;
+        // flex-wrap: wrap;
+
+        li {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+a {
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    text-decoration: none;
+
+    &:hover {
+        transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -ms-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+        text-decoration: none;
+    }
+}
+
+.artist-detail-item {
+    position: relative;
+    background: var(--whitecolor);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 1px 11px 0px rgb(206 206 206 / 50%);
+    border-radius: 3px;
+    margin-top: 80px;
+    padding-top: 80px;
+    border: solid 1px #c7c7c740;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+
+    &:hover{
+        border: solid 1px #c7c7c7;
+        transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    }
+
+    .avatar-img {
+
+        position: absolute;
+        top: -60px;
+        width: 100%;
+        left: 0;
+
+        figure {
+            margin: 0;
+
+            img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                margin: auto;
+            }
+        }
+    }
+
+    .artist-detail {
+        h4 {
+            color: #525252;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        a {
+
+            font-size: 15px;
+
+            color: #363636;
+            margin-bottom: 10px;
+            word-wrap: break-word !important;
+            display: block;
+
+            &:hover {
+                color: var(--themeColor);
+            }
+        }
+    }
+
+    .artist-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+
+        a {
+            color: var(--themeColor);
+            text-decoration: none;
+            font-size: 13px;
+            border: solid 1px var(--themeColor);
+            border-radius: 5px;
+            padding: 5px;
+            min-width: 115px;
+            text-align: center;
+            margin: 0 5px;
+
+            &:hover {
+                background: var(--whitecolor);
+                color: var(--themeColor);
+            }
+        }
+    }
+}

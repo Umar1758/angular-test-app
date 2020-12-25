@@ -1,0 +1,61 @@
+
+
+<!-- html for search page -->
+<div [hidden]="events.length === 0" class="result-wrapper">
+	<div class="container">
+	<a routerLink="/" class="back-result">back to results</a>
+	<div class="artist-list">
+		<div class="">
+			<ul class="row">
+				<li class="column-4">
+					<div class="artist-detail-item">
+						<div class="avatar-img">
+							<figure>
+								<img [src]="artist.thumb_url">
+							</figure>
+						</div>
+						<div class="artist-detail">
+							<h3> {{ artist.name }} </h3>
+							<a [href]="artist.facebook_page_url">{{ artist.facebook_page_url }}</a>
+						</div>
+					</div>
+					
+				</li>
+			</ul>
+		</div>
+	</div>
+	<h3><span class="count-num"> {{ events.length }}</span> Upcoming Events</h3>
+	<div class="artist-list">
+		<div class="">			
+			<ul class="row">
+				<li class="column-3" *ngFor="let item of events; index as i; trackBy: trackByFn">
+					<div class="event-item">
+						<h2>Event Details</h2>
+					
+					<div class="event-detail">
+						<div class="detail-item">
+							<h4>Country</h4>
+							<p>{{item.venue.country}}</p>
+						</div>
+						<div class="detail-item">
+							<h4>City</h4>
+							<p>{{item.venue.city}}</p>
+						</div>
+						<div class="detail-item">
+							<h4>Venu </h4>
+							<p>{{item.venue.name}}</p>
+						</div>
+						<div class="detail-item">
+							<h4>Date</h4>
+							<p>{{item.datetime | date }}</p>
+						</div>
+					</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+
+
