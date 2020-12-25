@@ -24,10 +24,14 @@
 
 }
 
-
+*{
+    box-sizing: border-box;
+}
 body {
     font-family: var(--themefontfamily);
     background: var(--graygcolor);
+    padding: 0;
+    margin: 0;
 }
 
 h3 {
@@ -35,6 +39,10 @@ h3 {
     font-size: 21px;
     font-weight: 600;
     margin: 0 0 5px;
+    @media (max-width:768px) {
+        margin-bottom: 10px;
+   
+       }  
 }
 
 ul {

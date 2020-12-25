@@ -1,5 +1,9 @@
 .artist-list{
     padding: 40px 0;
+    @media (max-width:768px) {
+        padding:  0;
+   
+       }  
 }
 
 
@@ -49,4 +53,12 @@
         padding: 8px 15px;
         border-radius: 3px;
         text-transform: capitalize;
+    }
+
+    .mobile-center{
+      
+    @media (max-width:768px) {
+     text-align: center;
+
+    }  
     }

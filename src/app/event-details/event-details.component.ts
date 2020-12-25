@@ -21,8 +21,11 @@ export class EventDetailsComponent implements OnInit {
   }
   getEvents = (artist, date) => {
     this.api.getArtistEvents(artist, date).subscribe(res => {
-      this.events = res;
-      this.artist = res[0].artist
+      if(res.length){
+        this.events = res;
+        this.artist = res[0].artist
+      }
+      
     })
   }
 
